@@ -1,0 +1,35 @@
+<template lang="pug">
+#app
+  link(
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css",
+    rel="stylesheet",
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ",
+    crossorigin="anonymous"
+  )
+  nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
+    .navbar-brand スキル申告
+    .navbar-nav
+      router-link.nav-item.nav-link(to="/") 回答状況一覧
+
+  router-view
+</template>
+
+<script>
+
+export default {
+  name: 'app'
+}
+
+</script>
+
+<style lang="stylus">
+#app
+  font-family "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+nav
+  margin-bottom 32px
+  // background-color lightgray
+
+</style>
