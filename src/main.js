@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import store from './vuex/store'
 
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

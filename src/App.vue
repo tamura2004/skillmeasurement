@@ -1,15 +1,17 @@
 <template lang="pug">
 #app
-  link(
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css",
-    rel="stylesheet",
-    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ",
-    crossorigin="anonymous"
-  )
-  nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
-    .navbar-brand スキル申告
-    .navbar-nav
-      router-link.nav-item.nav-link(to="/") 回答状況一覧
+  b-navbar(toggleable='')
+    b-nav-toggle(target='nav_collapse')
+      a.navbar-brand(to='/')
+        span スキル申告
+      b-collapse#nav_collapse(isnav='')
+        b-nav(isnavbar='')
+          b-nav-item Support
+          b-nav-item Docs
+          b-nav-item Contact Us
+          .navbar-nav
+            router-link.nav-item.nav-link(to="/") 回答状況一覧
+
 
   router-view
 </template>

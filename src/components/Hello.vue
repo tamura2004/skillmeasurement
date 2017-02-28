@@ -5,7 +5,7 @@
     @click="LIST_USER_SKILLS(user.id)"
   )
     h5.card-title {{ user.name }}
-    p 回答：{{ user.skillNum }}/123
+    h6 回答：{{ user.skillNum }}/123
 
 </template>
 
@@ -23,8 +23,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
 .card
-  width: 12rem
+  width: 160px
   display inline-block
-  margin 1rem 2rem
+  margin 8px 16px
+  padding 8px 16px
   text-align center
 </style>

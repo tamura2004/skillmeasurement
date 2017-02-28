@@ -1,11 +1,12 @@
 <template lang="pug">
 .container
-  h3 {{ user.name }}
-  h4(v-for="proc in skilltree.procs") {{ proc.name }}
-    h5(v-for="act in proc.acts") {{ act.name }}
-      h5(v-for="skill in act.skills") {{ act.name }}
+  h3 username: {{ user.name }}
+  h4(v-for="proc in skilltree.procs") proces: {{ proc.name }}
+    h5(v-for="act in proc.acts") activity: {{ act.name }}
+      h5(v-for="skill in act.skills") skill: {{ skill.name }}
         form
-          label.radio-inline(v-for="i in 5") {{ i}}
+          div(v-for="i in 5") {{ i}}
+            label.radio-inline {{ i}}
             input(type="radio",@change="alert(i)")
 
 </template>
